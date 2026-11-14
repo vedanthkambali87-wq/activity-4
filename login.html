@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101812">
+    <title>Log in — ArenaPass</title>
+    <link rel="icon" href="assets/arenapass-logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body class="auth-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ArenaPass home"><img src="assets/arenapass-logo.svg" alt="" width="38" height="38"><span>Arena<span class="brand-accent">Pass</span></span></a>
+      <div class="account-nav"><span class="auth-header-note">New to ArenaPass?</span><a class="button button-small" href="signup.html">Sign up <span aria-hidden="true">↗</span></a></div>
+    </header>
+    <main class="auth-main">
+      <section class="auth-aside">
+        <p class="eyebrow">YOUR PEOPLE. YOUR GAME.</p>
+        <h1>Good to<br>have you <span>back.</span></h1>
+        <p>Pick up where the crowd left off. Your next matchday is just around the corner.</p>
+        <a class="text-link" href="index.html#matches">Explore upcoming matches <span aria-hidden="true">→</span></a>
+        <div class="auth-aside-mark" aria-hidden="true">AP</div>
+      </section>
+      <section class="auth-card">
+        <p class="eyebrow">WELCOME BACK</p>
+        <h2>Log in</h2>
+        <p class="auth-subtitle">Enter your details to get back in the game.</p>
+        <form class="auth-form" data-auth-form="login">
+          <label for="username">User name</label>
+          <input id="username" name="username" type="text" autocomplete="username" placeholder="Your user name" required>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Your password" required>
+          <button class="button button-book" type="submit">Log in <span aria-hidden="true">→</span></button>
+          <p class="form-message" role="status" aria-live="polite"></p>
+          <p class="auth-switch">Don't have an account? <a href="signup.html">Sign up</a></p>
+        </form>
+      </section>
+    </main>
+    <footer class="auth-footer"><span>© 2026 ArenaPass Events · All rights reserved.</span><a href="mailto:hello@arenapass.example">Contact us</a></footer>
+  </body>
+</html>

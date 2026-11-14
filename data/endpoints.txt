@@ -1,0 +1,8 @@
+https://api.example.com/v1/users
+https://api.example.com/v1/sessions
+https://api.example.com/v1/users
+   https://api.example.com/v1/billing   
+
+https://api.example.com/v1/webhooks
+https://api.example.com/v1/audit-logs
+https://api.example.com/v1/sessions

@@ -1,0 +1,13 @@
+{
+  "name": "linecraft-project",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes tsx src/app.ts",
+    "build": "npx --yes tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "typescript": "^5.8.0"
+  }
+}

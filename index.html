@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101812">
+    <meta name="description" content="Find your next match and book your seats with ArenaPass.">
+    <title>ArenaPass — Be there for every moment</title>
+    <link rel="icon" href="assets/arenapass-logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ArenaPass home">
+        <img src="assets/arenapass-logo.svg" alt="" width="38" height="38">
+        <span>Arena<span class="brand-accent">Pass</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#matches">Matches</a>
+        <a href="#teams">Teams</a>
+        <a href="#venues">Venues</a>
+      </nav>
+      <div class="account-nav">
+        <a class="login-link" href="login.html">Log in</a>
+        <a class="button button-small" href="signup.html">Sign up <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow"><span class="live-dot"></span> YOUR NEXT BIG NIGHT STARTS HERE</p>
+          <h1>Feel every<br>moment <span>live.</span></h1>
+          <p class="hero-copy">The roar, the last-minute winner, the memories you keep. Find your match and be part of it.</p>
+          <a class="button" href="#book">Find your seats <span aria-hidden="true">↓</span></a>
+          <div class="hero-proof"><span class="proof-stars" aria-label="5 out of 5 stars">★★★★★</span><span>Made for matchday people</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="stadium-glow"></div>
+          <div class="hero-orbit orbit-one"></div>
+          <div class="hero-orbit orbit-two"></div>
+          <div class="hero-ball">◉</div>
+          <div class="hero-stamp"><span>LIVE</span><strong>IS<br>BETTER</strong></div>
+          <div class="hero-caption"><span class="caption-line"></span><span>THE BEAUTIFUL GAME<br><strong>IS WAITING</strong></span></div>
+        </div>
+      </section>
+
+      <section class="section matches-section" id="matches">
+        <div class="section-heading">
+          <div><p class="eyebrow">DON'T JUST WATCH. BE THERE.</p><h2>Next up <span class="heading-dot">.</span></h2></div>
+          <a class="text-link" href="#book">Book a match <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="match-grid">
+          <article class="match-card match-card-featured">
+            <div class="match-topline"><span class="match-tag">FEATURED MATCH</span><span class="match-date">SAT, NOV 21 · 7:30 PM</span></div>
+            <div class="match-teams">
+              <div class="team-mark mark-green">BFC</div><span class="versus">VS</span><div class="team-mark mark-blue">MCFC</div>
+            </div>
+            <div class="match-names"><strong>Bengaluru FC</strong><strong>Mumbai City FC</strong></div>
+            <div class="match-bottom"><span>📍 Sree Kanteerava Stadium</span><a href="#book" data-match="Bengaluru FC vs Mumbai City FC">Get tickets <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="match-card">
+            <div class="match-topline"><span class="match-tag match-tag-muted">LEAGUE NIGHT</span><span class="match-date">SUN, NOV 29 · 6:00 PM</span></div>
+            <div class="match-teams">
+              <div class="team-mark mark-yellow">KBFC</div><span class="versus">VS</span><div class="team-mark mark-red">CFC</div>
+            </div>
+            <div class="match-names"><strong>Kerala Blasters</strong><strong>Chennaiyin FC</strong></div>
+            <div class="match-bottom"><span>📍 Jawaharlal Nehru Stadium</span><a href="#book" data-match="Kerala Blasters vs Chennaiyin FC">Get tickets <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="match-card">
+            <div class="match-topline"><span class="match-tag match-tag-muted">WEEKEND FIXTURE</span><span class="match-date">SAT, DEC 05 · 7:30 PM</span></div>
+            <div class="match-teams">
+              <div class="team-mark mark-orange">HFC</div><span class="versus">VS</span><div class="team-mark mark-maroon">MB</div>
+            </div>
+            <div class="match-names"><strong>Hyderabad FC</strong><strong>Mohun Bagan SG</strong></div>
+            <div class="match-bottom"><span>📍 GMC Balayogi Stadium</span><a href="#book" data-match="Hyderabad FC vs Mohun Bagan SG">Get tickets <span aria-hidden="true">→</span></a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="booking-section" id="book">
+        <div class="booking-copy">
+          <p class="eyebrow">YOUR SEAT IS CALLING</p>
+          <h2>Make it a<br><span>matchday.</span></h2>
+          <p>Pick your fixture, find your view, and get ready to cheer. The best stories happen in the stands.</p>
+          <div class="booking-note"><span class="note-icon">✳</span><span>Every seat puts you closer to the action.</span></div>
+        </div>
+        <form class="booking-form" id="booking-form">
+          <div class="form-heading"><span class="form-step">01 / BOOK YOUR EXPERIENCE</span><span class="form-icon" aria-hidden="true">↗</span></div>
+          <label for="match">Choose a match</label>
+          <select id="match" name="match" required>
+            <option value="Bengaluru FC vs Mumbai City FC">Bengaluru FC vs Mumbai City FC</option>
+            <option value="Kerala Blasters vs Chennaiyin FC">Kerala Blasters vs Chennaiyin FC</option>
+            <option value="Hyderabad FC vs Mohun Bagan SG">Hyderabad FC vs Mohun Bagan SG</option>
+          </select>
+          <div class="form-row">
+            <div><label for="tickets">Number of tickets</label><input id="tickets" name="tickets" type="number" min="1" max="10" value="2" required></div>
+            <div><label for="section">Choose your section</label>
+              <select id="section" name="section" required>
+                <option value="Balcony" data-price="450">Balcony · ₹450</option>
+                <option value="Box Balcony" data-price="900">Box Balcony · ₹900</option>
+                <option value="Luxury Balcony" data-price="1500">Luxury Balcony · ₹1,500</option>
+                <option value="Ground" data-price="300">Ground · ₹300</option>
+                <option value="1st Class" data-price="650">1st Class · ₹650</option>
+              </select>
+            </div>
+          </div>
+          <div class="booking-total"><span>Estimated total</span><strong id="booking-total">₹900</strong></div>
+          <button class="button button-book" type="submit">Book tickets <span aria-hidden="true">→</span></button>
+          <p class="form-message" id="booking-message" role="status" aria-live="polite"></p>
+          <p class="form-disclaimer">Demo booking only. No payment will be collected.</p>
+        </form>
+      </section>
+
+      <section class="section teams-section" id="teams">
+        <div class="section-heading">
+          <div><p class="eyebrow">PICK YOUR SIDE</p><h2>Meet the teams <span class="heading-dot">.</span></h2></div>
+          <span class="section-aside">Six clubs. One game we love.</span>
+        </div>
+        <div class="team-grid">
+          <article class="team-card"><span class="team-mark mark-green">BFC</span><div><h3>Bengaluru FC</h3><p>Bengaluru · The Blues</p></div><span class="team-arrow">↗</span></article>
+          <article class="team-card"><span class="team-mark mark-blue">MCFC</span><div><h3>Mumbai City FC</h3><p>Mumbai · The Islanders</p></div><span class="team-arrow">↗</span></article>
+          <article class="team-card"><span class="team-mark mark-yellow">KBFC</span><div><h3>Kerala Blasters</h3><p>Kochi · Manjappada</p></div><span class="team-arrow">↗</span></article>
+          <article class="team-card"><span class="team-mark mark-red">CFC</span><div><h3>Chennaiyin FC</h3><p>Chennai · The Marina Machans</p></div><span class="team-arrow">↗</span></article>
+          <article class="team-card"><span class="team-mark mark-orange">HFC</span><div><h3>Hyderabad FC</h3><p>Hyderabad · The Nizams</p></div><span class="team-arrow">↗</span></article>
+          <article class="team-card"><span class="team-mark mark-maroon">MB</span><div><h3>Mohun Bagan SG</h3><p>Kolkata · Mariners</p></div><span class="team-arrow">↗</span></article>
+        </div>
+      </section>
+
+      <section class="venues-section" id="venues">
+        <div class="section-heading">
+          <div><p class="eyebrow">ICONIC PLACES. UNFORGETTABLE NOISE.</p><h2>Find your ground <span class="heading-dot">.</span></h2></div>
+          <span class="section-aside">From the first whistle to the final roar.</span>
+        </div>
+        <div class="venue-grid">
+          <article class="venue-card venue-bengaluru"><span class="venue-number">01</span><div><p>BENGALURU</p><h3>Sree Kanteerava<br>Stadium</h3><span>Home of Bengaluru FC</span></div><span class="venue-arrow">↗</span></article>
+          <article class="venue-card venue-kochi"><span class="venue-number">02</span><div><p>KOCHI</p><h3>Jawaharlal Nehru<br>Stadium</h3><span>Home of Kerala Blasters</span></div><span class="venue-arrow">↗</span></article>
+          <article class="venue-card venue-hyderabad"><span class="venue-number">03</span><div><p>HYDERABAD</p><h3>GMC Balayogi<br>Stadium</h3><span>Home of Hyderabad FC</span></div><span class="venue-arrow">↗</span></article>
+          <article class="venue-card venue-kolkata"><span class="venue-number">04</span><div><p>KOLKATA</p><h3>Salt Lake<br>Stadium</h3><span>Home of Mohun Bagan SG</span></div><span class="venue-arrow">↗</span></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><img src="assets/arenapass-logo.svg" alt="" width="38" height="38"><span>Arena<span class="brand-accent">Pass</span></span></a>
+          <p>For the love of being there.<br>Make every match a memory.</p>
+        </div>
+        <div class="footer-details">
+          <div><p class="footer-label">COMPANY</p><strong>ArenaPass Events</strong><span>Copyright © 2026 ArenaPass Events.<br>All rights reserved.</span></div>
+          <div><p class="footer-label">ADDRESS</p><strong>Say hello, anytime.</strong><span>Bengaluru, Karnataka, India</span></div>
+          <div><p class="footer-label">CONTACT US</p><strong><a href="mailto:hello@arenapass.example">hello@arenapass.example</a></strong><span><a href="tel:+918045678900">+91 80 4567 8900</a></span></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>Made for the stands, with love.</span><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a></div>
+    </footer>
+  </body>
+</html>
